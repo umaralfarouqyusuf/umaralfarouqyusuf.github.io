@@ -33,7 +33,7 @@ h1 { max-width: 700px; font-size: clamp(3.2rem, 7vw, 6.3rem); }
 h1 span, h2 em { color: var(--cyan); font-style: normal; }
 .hero-text { max-width: 540px; margin: 30px 0; color: var(--muted); font-size: 1.05rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 48px; padding: 0 20px; border: 1px solid var(--cyan); font-size: .8rem; font-weight: 700; transition: transform .2s ease, background .2s ease; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 48px; padding: 0 20px; border: 1px solid var(--cyan); font-size: .8rem; font-weight: 700; transition: transform .18s ease, background .18s ease; }
 .button:hover { transform: translateY(-3px); }
 .button-primary { color: var(--navy); background: var(--cyan); }
 .button-primary:hover { background: var(--lime); border-color: var(--lime); }
@@ -44,12 +44,46 @@ h1 span, h2 em { color: var(--cyan); font-style: normal; }
 .orbit { position: absolute; border: 1px solid var(--line); border-radius: 50%; transform: rotate(-25deg); }
 .orbit-one { width: 360px; height: 190px; }
 .orbit-two { width: 240px; height: 370px; }
-.evidence-card { position: relative; width: min(100%, 300px); min-height: 355px; padding: 25px; overflow: hidden; border: 1px solid rgba(116, 228, 223, .38); background: linear-gradient(145deg, rgba(25, 52, 67, .92), rgba(9, 24, 39, .96)); box-shadow: 25px 30px 80px rgba(0, 0, 0, .25); transform: rotate(5deg); }
+
+/* Profile photograph: keep on the right on desktop, maintain natural proportions and subtle rounded corners */
+.profile-photo {
+  width: min(300px, 40vw);
+  aspect-ratio: 3 / 4; /* portrait crop; keeps natural proportions while allowing responsive scaling */
+  border-radius: 10px; /* subtle professional rounding (8-12px requested) */
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(8,17,31,0.88), rgba(13,27,43,0.95)); /* dark backing to reduce cyan contrast */
+  border: 1px solid rgba(116,228,223,0.08);
+  box-shadow: 0 8px 30px rgba(2,6,10,0.6);
+  z-index: 3; /* keep photo above decorative card */
+  display: block;
+  margin-inline-start: auto; /* ensure it's aligned to the right column */
+}
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* clean crop while preserving face proportions */
+  object-position: 50% 38%; /* nudge face slightly up — tweak if the portrait needs it */
+  display: block;
+}
+
+/* Decorative evidence card: reduce prominence and avoid overlapping the photo */
+.evidence-card {
+  position: relative;
+  width: min(100%, 260px);
+  min-height: 320px;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(116, 228, 223, .12); /* reduced glow */
+  background: linear-gradient(145deg, rgba(18,48,68,0.18), rgba(13,27,43,0.14)); /* more subtle */
+  transform: rotate(-6deg); /* reduced tilt */
+  box-shadow: none; /* remove heavy glow */
+  z-index: 1; /* sit behind the photo */
+  margin-left: -20px; /* slight overlap to suggest depth but not cover face */
+}
+.evidence-card .fingerprint { position: absolute; top: 80px; left: 0; width: 100%; color: var(--cyan); opacity: .08; text-align: center; font-size: 7rem; }
+.scan-lines { height: 100px; margin: 34px -20px 20px; opacity: .22; background: repeating-linear-gradient(0deg, transparent 0 10px, rgba(116,228,223,0.06) 11px 12px); }
 .card-top, .card-meta { display: flex; justify-content: space-between; color: var(--muted); font-size: .62rem; letter-spacing: .12em; }
-.pulse { margin: 4px 0 0; }
-.scan-lines { height: 120px; margin: 42px -25px 25px; opacity: .35; background: repeating-linear-gradient(0deg, transparent 0 8px, var(--cyan) 9px 10px); }
-.fingerprint { position: absolute; top: 100px; left: 0; width: 100%; color: var(--cyan); opacity: .2; text-align: center; font-size: 8rem; }
-.card-title { position: relative; margin: 0 0 35px; font-size: 1.45rem; line-height: 1.2; }
+.card-title { position: relative; margin: 0 0 28px; font-size: 1.25rem; line-height: 1.2; }
 .card-title strong, .card-meta strong { color: var(--lime); }
 
 .intro-section { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding-block: 115px; border-top: 1px solid var(--line); }
@@ -75,13 +109,25 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.5rem); }
 .footer-wrap div { display: flex; gap: 22px; }
 .footer-wrap a:hover { color: var(--cyan); }
 
+@media (max-width: 1100px) {
+  /* slightly reduce photo size on medium screens */
+  .profile-photo { width: min(260px, 36vw); }
+  .evidence-card { width: min(220px, 36vw); min-height: 280px; margin-left: -12px; transform: rotate(-5deg); }
+  .orbit-one { width: 300px; height: 160px; }
+  .orbit-two { width: 200px; height: 300px; }
+}
+
 @media (max-width: 850px) {
   .nav-wrap { align-items: flex-start; flex-direction: column; padding-block: 18px; }
   .site-nav { justify-content: flex-start; gap: 12px 18px; }
   .hero { grid-template-columns: 1fr; padding-block: 75px; }
   .hero-visual { min-height: 330px; }
+  /* On mobile, ensure photo and card stack without overlapping text */
+  .profile-photo { width: min(220px, 46vw); aspect-ratio: 3 / 4; margin: 0 auto 18px; }
+  .evidence-card { position: relative; margin: 0 auto; transform: none; margin-top: 8px; }
   .intro-section { gap: 35px; }
 }
+
 @media (max-width: 620px) {
   .container { width: min(calc(100% - 32px), var(--max)); }
   h1 { font-size: clamp(2.9rem, 15vw, 4.5rem); }
@@ -92,5 +138,7 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.5rem); }
   .focus-card h3 { margin-top: 45px; }
   .cta-box { padding: 38px 24px; }
   .footer-wrap { align-items: flex-start; flex-direction: column; justify-content: center; padding-block: 25px; }
+  .profile-photo { width: min(180px, 44vw); aspect-ratio: 3 / 4; }
+  .evidence-card { width: min(240px, 60vw); }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
