@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">UAY emblem</title>
+  <desc id="desc">A minimal emblem with the letters UA in a circular digital forensics-inspired design.</desc>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#74e4df"/>
+      <stop offset="100%" stop-color="#c9ef78"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="24" fill="#08111f"/>
+  <circle cx="64" cy="64" r="50" fill="none" stroke="url(#g)" stroke-width="4" opacity="0.9"/>
+  <path d="M28 88V40h20c14 0 22 7 22 19 0 12-8 19-22 19H28zm18-15h4c7 0 11-3 11-9s-4-9-11-9h-4v18z" fill="url(#g)"/>
+  <path d="M86 40h14v48H86v-18h-8v18H64V40h14v18h8V40z" fill="url(#g)" opacity="0.95"/>
+</svg>
