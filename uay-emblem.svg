@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-  <title id="title">UAY emblem</title>
-  <desc id="desc">Monogram UAY with subtle fingerprint curves and a small technical node. Colors: navy, deep blue, forensic cyan, silver-white.</desc>
-
-  <!-- Palette:
-       Primary navy: #0B1424 (not used as fill to keep background transparent)
-       Deep blue:   #16314D
-       Forensic cyan:#78DCE5
-       Silver-white: #E8F0F5
-  -->
-
-  <!-- Outer ring for silhouette (stroke only to keep background transparent) -->
-  <g id="ring">
-    <circle cx="256" cy="256" r="212" fill="none" stroke="#16314D" stroke-width="20" />
-    <!-- short cyan accent arc to suggest precision -->
-    <path d="M112 160 A152 152 0 0 1 400 160" fill="none" stroke="#78DCE5" stroke-width="10" stroke-linecap="round" opacity="0.95"/>
-  </g>
-
-  <!-- Fingerprint arcs (subtle, behind letters) -->
-  <g id="fingerprint" fill="none" stroke="#78DCE5" stroke-width="6" stroke-linecap="round" opacity="0.12">
-    <path d="M176 196 C210 162 246 150 288 150" />
-    <path d="M164 222 C200 190 238 180 284 180" />
-    <path d="M152 254 C196 226 236 216 280 214" />
-  </g>
-
-  <!-- Monogram (U A Y) - primary shapes use silver-white strokes for contrast -->
-  <g id="monogram" stroke="#E8F0F5" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <!-- U: left block; open-top U with rounded bottom via stroke -->
-    <path d="M140 150 v110 a56 56 0 0 0 112 0 v-110" />
-
-    <!-- A: centered stylized A with clear crossbar; slight gap for letter clarity -->
-    <path d="M240 270 L288 150 L336 270" />
-    <path d="M267 230 L317 230" stroke-width="20" />
-
-    <!-- Y: right; upper forks join into a stem -->
-    <path d="M356 150 L388 210 L420 150" />
-    <path d="M388 210 v110" />
-  </g>
-
-  <!-- Small technical node: a precise cyan dot connected by a thin trace to the 'A' crossbar -->
-  <g id="tech" fill="#78DCE5" stroke="#78DCE5">
-    <line x1="322" y1="230" x2="360" y2="200" stroke="#78DCE5" stroke-width="4" stroke-linecap="round" opacity="0.95" />
-    <circle cx="372" cy="188" r="7" fill="#78DCE5" />
-  </g>
-
+  <title id="title">UAY emblem (embedded raster)</title>
+  <desc id="desc">SVG wrapper embedding the raster emblem (UAY-emblem.jpg). This preserves the provided artwork while making an SVG asset that displays the JPEG inside an SVG container.</desc>
+  <!-- Embedded raster reference: keeps the original JPEG file in the repo and displays it inside an SVG. -->
+  <image href="UAY-emblem.jpg" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" />
 </svg>
