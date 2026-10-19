@@ -21,28 +21,28 @@
     .contact-section {
       padding-block: 80px 120px;
     }
-
+    
     .contact-intro {
       margin-bottom: 60px;
     }
-
+    
     .contact-intro h1 {
       margin-bottom: 20px;
     }
-
+    
     .contact-intro p {
       max-width: 540px;
       color: var(--muted);
       font-size: 1.05rem;
     }
-
+    
     .contact-links {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       max-width: 900px;
     }
-
+    
     .contact-card {
       display: flex;
       flex-direction: column;
@@ -55,13 +55,13 @@
       text-align: center;
       transition: all 0.3s ease;
     }
-
+    
     .contact-card:hover {
       border-color: var(--cyan);
       background: linear-gradient(135deg, rgba(116, 228, 223, 0.1), rgba(116, 228, 223, 0.05));
       transform: translateY(-4px);
     }
-
+    
     .contact-label {
       display: block;
       color: var(--cyan);
@@ -71,7 +71,7 @@
       text-transform: uppercase;
       margin-bottom: 16px;
     }
-
+    
     .contact-link {
       display: inline-block;
       color: var(--ink);
@@ -80,31 +80,31 @@
       word-break: break-all;
       transition: all 0.2s ease;
     }
-
+    
     .contact-card:hover .contact-link {
       color: var(--lime);
     }
-
+    
     .contact-icon {
       font-size: 1.5rem;
       margin-bottom: 12px;
       opacity: 0.7;
       transition: opacity 0.2s ease;
     }
-
+    
     .contact-card:hover .contact-icon {
       opacity: 1;
     }
-
+    
     @media (max-width: 620px) {
       .contact-links {
         grid-template-columns: 1fr;
       }
-
+      
       .contact-card {
         padding: 30px 20px;
       }
-
+      
       .contact-link {
         font-size: 0.95rem;
       }
@@ -115,7 +115,7 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Umar Alfarouq Yusuf home">
-        <span class="brand-mark" aria-hidden="true">UA</span>
+        <img src="uay-emblem.svg" class="brand-emblem" alt="UAY emblem" width="34" height="34" loading="lazy" onerror="this.style.display='none'">
         <span>Umar Alfarouq Yusuf</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
