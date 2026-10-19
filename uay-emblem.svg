@@ -1,14 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">UAY emblem</title>
-  <desc id="desc">A minimal emblem with the letters UA in a circular digital forensics-inspired design.</desc>
-  <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#74e4df"/>
-      <stop offset="100%" stop-color="#c9ef78"/>
-    </linearGradient>
-  </defs>
-  <rect width="128" height="128" rx="24" fill="#08111f"/>
-  <circle cx="64" cy="64" r="50" fill="none" stroke="url(#g)" stroke-width="4" opacity="0.9"/>
-  <path d="M28 88V40h20c14 0 22 7 22 19 0 12-8 19-22 19H28zm18-15h4c7 0 11-3 11-9s-4-9-11-9h-4v18z" fill="url(#g)"/>
-  <path d="M86 40h14v48H86v-18h-8v18H64V40h14v18h8V40z" fill="url(#g)" opacity="0.95"/>
+  <desc id="desc">Monogram UAY with subtle fingerprint curves and a small technical node. Colors: navy, deep blue, forensic cyan, silver-white.</desc>
+
+  <!-- Palette:
+       Primary navy: #0B1424 (not used as fill to keep background transparent)
+       Deep blue:   #16314D
+       Forensic cyan:#78DCE5
+       Silver-white: #E8F0F5
+  -->
+
+  <!-- Outer ring for silhouette (stroke only to keep background transparent) -->
+  <g id="ring">
+    <circle cx="256" cy="256" r="212" fill="none" stroke="#16314D" stroke-width="20" />
+    <!-- short cyan accent arc to suggest precision -->
+    <path d="M112 160 A152 152 0 0 1 400 160" fill="none" stroke="#78DCE5" stroke-width="10" stroke-linecap="round" opacity="0.95"/>
+  </g>
+
+  <!-- Fingerprint arcs (subtle, behind letters) -->
+  <g id="fingerprint" fill="none" stroke="#78DCE5" stroke-width="6" stroke-linecap="round" opacity="0.12">
+    <path d="M176 196 C210 162 246 150 288 150" />
+    <path d="M164 222 C200 190 238 180 284 180" />
+    <path d="M152 254 C196 226 236 216 280 214" />
+  </g>
+
+  <!-- Monogram (U A Y) - primary shapes use silver-white strokes for contrast -->
+  <g id="monogram" stroke="#E8F0F5" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- U: left block; open-top U with rounded bottom via stroke -->
+    <path d="M140 150 v110 a56 56 0 0 0 112 0 v-110" />
+
+    <!-- A: centered stylized A with clear crossbar; slight gap for letter clarity -->
+    <path d="M240 270 L288 150 L336 270" />
+    <path d="M267 230 L317 230" stroke-width="20" />
+
+    <!-- Y: right; upper forks join into a stem -->
+    <path d="M356 150 L388 210 L420 150" />
+    <path d="M388 210 v110" />
+  </g>
+
+  <!-- Small technical node: a precise cyan dot connected by a thin trace to the 'A' crossbar -->
+  <g id="tech" fill="#78DCE5" stroke="#78DCE5">
+    <line x1="322" y1="230" x2="360" y2="200" stroke="#78DCE5" stroke-width="4" stroke-linecap="round" opacity="0.95" />
+    <circle cx="372" cy="188" r="7" fill="#78DCE5" />
+  </g>
+
 </svg>
