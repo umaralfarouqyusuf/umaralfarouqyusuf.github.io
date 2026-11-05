@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-  <title id="title">UAY emblem (embedded raster)</title>
-  <desc id="desc">SVG wrapper embedding the raster emblem (UAY-emblem.jpg). This preserves the provided artwork while making an SVG asset that displays the JPEG inside an SVG container.</desc>
-  <!-- Embedded raster reference: keeps the original JPEG file in the repo and displays it inside an SVG. -->
-  <image href="UAY-emblem.jpg" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" />
-</svg>
