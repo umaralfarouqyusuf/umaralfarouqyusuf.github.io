@@ -1,10 +1,6 @@
-# Digital Forensics Portfolio — Agreed Content Specification
+# Digital Forensics Portfolio — Approved Implementation Baseline
 
-## Baseline
-
-This specification records the agreed information architecture for Umar Alfarouq Yusuf's Digital Forensics portfolio. Preserve the existing visual design; make only focused changes needed for the agreed content and functionality. Do not invent personal, training, certification, project, or laboratory details. Add facts and downloadable documents only when supported by records.
-
-## Primary pages (nine)
+## Primary navigation
 
 1. Home — `index.html`
 2. About — `about.html`
@@ -16,42 +12,23 @@ This specification records the agreed information architecture for Umar Alfarouq
 8. Research — `research.html`
 9. Contact — `contact.html`
 
-DFLAB is both a featured project on Projects and its own technical documentation page. SIWES belongs under Experience. 4LF4 remains a separate website and is outside this portfolio's scope.
+DFLAB is featured in Projects and has its own technical page. SIWES appears under Experience. The unrelated 4LF4 website is separate and outside this site's scope.
 
-## Page content
+## Implementation rules
 
-### Home
-Professional introduction and specialization; featured projects; DFLAB and SIWES highlights; research highlights; contact links.
+- Preserve the existing visual design, styles, typography, colours, responsive behavior, and working functionality.
+- Keep Digital Forensics as the professional specialisation. An academic programme may be named accurately without redefining the specialisation.
+- Never invent education, experience, tools, certifications, projects, or achievements. Mark missing details as requiring verification.
+- Distinguish completed certifications, courses, training, workshops, seminars, and participation certificates.
+- Assign skill levels only when supported by documented practical experience.
+- Clearly label simulated exercises, training datasets, and laboratory experiments; never present simulations as real criminal investigations.
+- DFLAB statuses mean: Designed (architecture/specifications documented); Planned (procurement/deployment proposed); Implemented (components installed/configured); Validated (components tested/documented). Do not claim operational status without implementation and validation evidence.
+- Add SIWES PDFs and credentials only after approved documents are supplied.
 
-### About
-Professional profile, academic background, specialization, interests, and career objectives. Fill education details from verified records.
+## CV
 
-### Experience — SIWES
-Include SIWES overview; training organization and department; objectives; period and duration; responsibilities and duties; weekly activities; technical skills acquired; challenges and solutions; learning outcomes; SIWES technical report (PDF); SIWES logbook (PDF); and supporting documentation. Link PDFs only when approved files exist.
+The approved CV path is `assets/documents/cv/Umar-Alfarouq-Yusuf-Digital-Forensics-CV.pdf`, linked from Home and About. The PDF has not yet been supplied; add the approved, current CV at that exact path before publishing the links as working downloads.
 
-### Skills
-Digital and computer forensics; operating systems; memory and network forensics; methodology; evidence handling; and tools. Describe skills at an accurate learning/proficiency level.
+## Existing architecture
 
-### Certifications
-Certifications, professional training, workshops, seminars, and credential verification. Preserve credential details and publish verification links only when available.
-
-### Projects
-Practical investigations, forensic exercises, technical projects, and case studies. Feature DFLAB alongside the other practical work. Categories include disk and file-system, Windows, memory, Linux, network, mobile-device forensics, digital evidence acquisition, and investigations/case studies. Publish specific findings only when documented and authorized.
-
-### DFLAB
-Document project overview; objectives and scope; laboratory architecture; hardware requirements and procurement; storage architecture and evidence management; software and forensic tools; security and access control; deployment plan; standard operating procedures (SOPs); documentation and supporting evidence; and future development. Use only these progress states when evidenced: **Designed**, **Planned**, **Implemented**, **Validated**. Do not imply implementation or validation without supporting records.
-
-### Research
-Digital forensics; computer forensics; operating-system forensics; file-system research; digital evidence and methodology; technical notes and tutorials; tool evaluation and testing; research publications; references and bibliography.
-
-### Contact
-Professional email, GitHub, LinkedIn, and collaboration enquiries.
-
-## Design and scope constraints
-
-- Keep the existing visual design and styles; change CSS or JavaScript only when necessary for functionality.
-- Keep the primary navigation to the nine pages listed above.
-- Do not add unrelated top-level pages or restructure the site unnecessarily.
-- Keep SIWES documentation under Experience and research materials under Research.
-- Keep the 4LF4 website separate.
-- Keep all investigations authorized, simulated, public-dataset-based, or appropriately anonymized.
+Keep existing root-level HTML pages, `css/`, `js/`, and `assets/images/` in place. Do not move or duplicate these working assets as part of this refinement.
