@@ -3,14 +3,345 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Practical and professional experience of Umar Alfarouq Yusuf, including SIWES and future relevant placements.">
+  <meta name="description" content="SIWES experience of Umar Alfarouq Yusuf at Gombe State University ICT Park, focused on digital forensics.">
   <meta name="theme-color" content="#08111f">
   <title>Experience | Umar Alfarouq Yusuf — Digital Forensics</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+    }
+
+    .experience-main {
+      padding: 64px 0 100px;
+    }
+
+    .experience-hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 6vw, 58px);
+      border: 1px solid rgba(148, 163, 184, .2);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(56, 189, 248, .16), transparent 35%),
+        linear-gradient(135deg, #101d31, #0b1423 70%);
+      color: #f8fafc;
+    }
+
+    .experience-hero h1 {
+      max-width: 760px;
+      margin: 10px 0 16px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.08;
+    }
+
+    .experience-hero .hero-text {
+      max-width: 760px;
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+
+    .experience-eyebrow {
+      color: #7dd3fc;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-size: .78rem;
+    }
+
+    .experience-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .experience-tag {
+      padding: 8px 13px;
+      border: 1px solid rgba(125, 211, 252, .24);
+      border-radius: 999px;
+      background: rgba(15, 23, 42, .55);
+      color: #e0f2fe;
+      font-size: .88rem;
+    }
+
+    .experience-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      margin: 24px 0 44px;
+      padding: 12px;
+      border: 1px solid rgba(148, 163, 184, .18);
+      border-radius: 14px;
+      background: rgba(8, 17, 31, .94);
+      backdrop-filter: blur(12px);
+      scrollbar-width: thin;
+    }
+
+    .experience-nav a {
+      flex: 0 0 auto;
+      padding: 9px 13px;
+      border-radius: 9px;
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: .9rem;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .experience-nav a:hover,
+    .experience-nav a:focus-visible {
+      outline: none;
+      background: rgba(56, 189, 248, .14);
+      color: #7dd3fc;
+    }
+
+    .experience-section {
+      margin-top: 58px;
+      scroll-margin-top: 100px;
+    }
+
+    .experience-section > h2 {
+      margin-bottom: 12px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+    }
+
+    .section-intro {
+      max-width: 850px;
+      color: #aebccd;
+      line-height: 1.8;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .experience-card {
+      padding: 24px;
+      border: 1px solid rgba(148, 163, 184, .17);
+      border-radius: 16px;
+      background: rgba(15, 23, 42, .55);
+    }
+
+    .experience-card h3 {
+      margin: 0 0 12px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.1rem;
+    }
+
+    .experience-card p,
+    .experience-card li {
+      color: #c1ccda;
+      line-height: 1.75;
+    }
+
+    .experience-card p:last-child,
+    .experience-card ul:last-child,
+    .experience-card ol:last-child {
+      margin-bottom: 0;
+    }
+
+    .experience-card strong {
+      color: #f1f5f9;
+    }
+
+    .experience-card ul,
+    .experience-card ol {
+      padding-left: 21px;
+    }
+
+    .detail-table-wrap {
+      overflow-x: auto;
+      margin-top: 20px;
+      border: 1px solid rgba(148, 163, 184, .18);
+      border-radius: 14px;
+    }
+
+    .detail-table {
+      width: 100%;
+      min-width: 460px;
+      border-collapse: collapse;
+    }
+
+    .detail-table th,
+    .detail-table td {
+      padding: 13px 16px;
+      border-bottom: 1px solid rgba(148, 163, 184, .14);
+      text-align: left;
+      vertical-align: top;
+      color: #cbd5e1;
+    }
+
+    .detail-table th {
+      width: 34%;
+      color: #f8fafc;
+      background: rgba(30, 41, 59, .5);
+    }
+
+    .detail-table tr:last-child th,
+    .detail-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .week-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .week-item {
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, .19);
+      border-radius: 14px;
+      background: rgba(15, 23, 42, .55);
+    }
+
+    .week-item[open] {
+      border-color: rgba(56, 189, 248, .42);
+      background: rgba(15, 23, 42, .78);
+    }
+
+    .week-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 19px 22px;
+      color: #f8fafc;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 700;
+    }
+
+    .week-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .week-item summary::after {
+      content: "+";
+      display: grid;
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, .13);
+      color: #7dd3fc;
+      font-size: 1.2rem;
+    }
+
+    .week-item[open] summary::after {
+      content: "−";
+    }
+
+    .week-content {
+      padding: 0 22px 22px;
+      color: #c1ccda;
+      line-height: 1.75;
+    }
+
+    .week-content h4 {
+      margin: 6px 0 8px;
+      color: #7dd3fc;
+    }
+
+    .week-content ul {
+      padding-left: 21px;
+    }
+
+    .week-focus {
+      margin: 14px 0 0;
+      padding-top: 12px;
+      border-top: 1px solid rgba(148, 163, 184, .14);
+    }
+
+    .skill-list {
+      display: grid;
+      gap: 9px;
+      padding: 0 !important;
+      list-style: none;
+    }
+
+    .skill-list li {
+      position: relative;
+      padding-left: 22px;
+    }
+
+    .skill-list li::before {
+      position: absolute;
+      left: 0;
+      color: #38bdf8;
+      content: "✓";
+      font-weight: 700;
+    }
+
+    .document-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+      color: #7dd3fc;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .document-link:hover {
+      color: #bae6fd;
+      text-decoration: underline;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-top: 28px;
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+
+    .back-to-top:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+      .experience-main {
+        padding-top: 38px;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-nav {
+        margin-top: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
@@ -18,6 +349,7 @@
         <img src="assets/images/uay-emblem.svg" class="brand-emblem" alt="UAY emblem" width="34" height="34">
         <span>Umar Alfarouq Yusuf</span>
       </a>
+
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -32,113 +364,68 @@
     </div>
   </header>
 
-  <main class="container" style="padding:80px 0 120px">
-    <p class="eyebrow">Experience</p>
-    <h1>Practical &amp; Professional Experience</h1>
-    <p class="hero-text">
-      This page documents SIWES and can accommodate future internships, industrial attachments,
-      research placements, and other relevant experience. Details below reflect verified training records and documentation.
-    </p>
-
-    <section style="margin-top:45px">
-      <h2>SIWES Overview</h2>
+  <main class="container experience-main" id="top">
+    <section class="experience-hero" aria-labelledby="page-title">
+      <p class="experience-eyebrow">Professional Experience · SIWES</p>
+      <h1 id="page-title">Building a Foundation in Digital Forensics</h1>
       <p class="hero-text">
+        A twelve-week Student Industrial Work Experience Scheme focused on ICT operations,
+        computer systems, networking, operating systems, and foundational digital forensics.
+      </p>
+      <div class="experience-tags" aria-label="Placement summary">
+        <span class="experience-tag">Gombe State University – ICT Park</span>
+        <span class="experience-tag">24 August – 13 November 2026</span>
+        <span class="experience-tag">12 Weeks</span>
+        <span class="experience-tag">Digital Forensics</span>
+      </div>
+    </section>
+
+    <nav class="experience-nav" aria-label="On this page">
+      <a href="#overview">Overview</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#placement">Placement</a>
+      <a href="#responsibilities">Responsibilities</a>
+      <a href="#weekly-activities">Weekly Activities</a>
+      <a href="#skills">Skills</a>
+      <a href="#tools">Tools</a>
+      <a href="#challenges">Challenges</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="#documents">Documents</a>
+    </nav>
+
+    <section class="experience-section" id="overview">
+      <h2>SIWES Overview</h2>
+      <p class="section-intro">
         The Student Industrial Work Experience Scheme (SIWES) provided an opportunity to
         develop practical technical knowledge, gain exposure to an ICT working environment,
         and strengthen foundational competencies relevant to digital forensics.
       </p>
+
+      <div class="experience-grid">
+        <article class="experience-card">
+          <h3>Organisation &amp; Department</h3>
+          <p><strong>Host organisation:</strong> Gombe State University – ICT Park</p>
+          <p><strong>Training location:</strong> NITDA ICT Park, Gombe State University</p>
+          <p><strong>Department/Unit:</strong> To be confirmed from the official SIWES placement or logbook records.</p>
+        </article>
+
+        <article class="experience-card">
+          <h3>Training Snapshot</h3>
+          <p><strong>Programme:</strong> Student Industrial Work Experience Scheme (SIWES)</p>
+          <p><strong>Training period:</strong> 24 August 2026 – 13 November 2026</p>
+          <p><strong>Duration:</strong> 12 weeks</p>
+          <p><strong>Professional field:</strong> Digital forensics</p>
+        </article>
+      </div>
     </section>
 
-    <div class="focus-grid" style="margin-top:35px;grid-template-columns:repeat(2,minmax(0,1fr))">
-      <article class="focus-card">
-        <h3>Organisation &amp; Department</h3>
-        <p><strong>Host Organisation:</strong> Gombe State University – ICT Park</p>
-        <p><strong>Training Location:</strong> NITDA ICT Park, Gombe State University</p>
-        <p><strong>Department/Unit:</strong> To be confirmed from the official SIWES placement or logbook records.</p>
-        <p>
-          My Student Industrial Work Experience Scheme (SIWES) placement was undertaken at the
-          NITDA ICT Park, Gombe State University. The placement provided an opportunity to gain
-          exposure to a structured university-based ICT environment and develop practical knowledge
-          through workplace learning and technical activities.
-        </p>
-      </article>
-
-      <article class="focus-card">
-        <h3>Objectives</h3>
-        <p>
-          The programme focused on developing practical knowledge in computer systems, networking,
-          operating systems, digital forensics, technical documentation, and professional work ethics.
-        </p>
-      </article>
-
-      <article class="focus-card">
-        <h3>Training Period &amp; Duration</h3>
-        <p><strong>Training Period:</strong> 24 August 2026 – 13 November 2026</p>
-        <p><strong>Duration:</strong> 12 Weeks</p>
-        <p><strong>Professional Field:</strong> Digital Forensics</p>
-      </article>
-
-      <article class="focus-card">
-        <h3>Responsibilities &amp; Assigned Duties</h3>
-        <p>
-          Participated in structured learning activities covering computer systems, networking,
-          operating systems, digital forensics, fundamental Python programming, and technical documentation.
-        </p>
-      </article>
-
-      <article class="focus-card">
-        <h3>Weekly Activities &amp; Tasks</h3>
-        <p>
-          Covered ICT orientation, computer systems, Windows administration, networking fundamentals,
-          Linux and Windows command-line operations, digital forensics fundamentals, evidence integrity,
-          cybercrime concepts, Python basics, and final review/reporting.
-        </p>
-      </article>
-
-      <article class="focus-card">
-        <h3>Technical Skills Acquired</h3>
-        <p>
-          Hardware identification, system administration, network fundamentals, digital evidence handling,
-          hashing, forensic imaging concepts, and Python programming foundations.
-        </p>
-      </article>
-
-      <article class="focus-card">
-        <h3>Tools &amp; Technologies Used</h3>
-        <p>
-          Microsoft Word, Windows OS, Linux environment, Windows Command Prompt, Linux terminal,
-          system monitoring utilities, JSON and file management concepts, and foundational Python.
-        </p>
-      </article>
-
-      <article class="focus-card">
-        <h3>Challenges &amp; Solutions</h3>
-        <p>
-          Strengthened understanding of hardware systems, networking protocols, command-line operations,
-          evidence integrity, and how programming can support digital forensic tasks.
-        </p>
-      </article>
-
-      <article class="focus-card">
-        <h3>Learning Outcomes</h3>
-        <p>
-          Developed foundational technical competence in computer systems, operating systems,
-          networking, digital evidence handling, forensic principles, and documentation.
-        </p>
-      </article>
-    </div>
-
-    <section style="margin-top:60px">
-      <h2>Detailed SIWES Report</h2>
-
-      <div class="focus-card" style="margin-top:20px; padding:30px;">
-        <h3>1. Objectives</h3>
-        <p>
-          The Student Industrial Work Experience Scheme (SIWES) provided an opportunity to
-          develop practical technical knowledge, gain exposure to an ICT working environment,
-          and strengthen foundational competencies relevant to digital forensics.
-        </p>
-        <p>The primary learning objectives were to:</p>
+    <section class="experience-section" id="objectives">
+      <h2>Learning Objectives</h2>
+      <p class="section-intro">
+        The training aimed to build a grounding in ICT systems and introduce the principles
+        and practices that support digital forensic examination.
+      </p>
+      <article class="experience-card">
         <ol>
           <li>Understand computer hardware architecture, operating systems, and storage technologies.</li>
           <li>Develop foundational knowledge of Windows and Linux operating systems.</li>
@@ -147,294 +434,395 @@
           <li>Understand the principles, processes, and methodologies of digital forensics.</li>
           <li>Learn how digital evidence is identified, preserved, examined, analysed, and documented.</li>
           <li>Understand cryptographic hashing, forensic imaging, evidence integrity, and chain of custody.</li>
-          <li>Develop foundational Python programming knowledge and understand its applications in digital forensic automation.</li>
-          <li>Improve technical documentation, analytical thinking, problem-solving, and professional communication.</li>
-          <li>Understand how computer systems and digital technologies support forensic examination and investigation.</li>
+          <li>Develop foundational Python knowledge and understand its possible forensic applications.</li>
+          <li>Improve technical documentation, analytical thinking, problem-solving, and communication.</li>
+          <li>Understand how computer systems and digital technologies support forensic examination.</li>
         </ol>
-      </div>
+      </article>
+    </section>
 
-      <div class="focus-card" style="margin-top:20px; padding:30px;">
-        <h3>2. Training Period &amp; Duration</h3>
-        <table style="width:100%; border-collapse:collapse; margin-top:15px;">
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3; font-weight:600;">Programme</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Student Industrial Work Experience Scheme (SIWES)</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3; font-weight:600;">Host Organisation</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Gombe State University – ICT Park</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3; font-weight:600;">Start Date</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">24 August 2026</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3; font-weight:600;">End Date</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">13 November 2026</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3; font-weight:600;">Duration</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">12 Weeks</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3; font-weight:600;">Training Environment</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">University ICT and technical operations environment</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3; font-weight:600;">Professional Focus</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Digital Forensics</td>
-          </tr>
+    <section class="experience-section" id="placement">
+      <h2>Training Period &amp; Placement</h2>
+      <div class="detail-table-wrap">
+        <table class="detail-table">
+          <tbody>
+            <tr><th scope="row">Programme</th><td>Student Industrial Work Experience Scheme (SIWES)</td></tr>
+            <tr><th scope="row">Host organisation</th><td>Gombe State University – ICT Park</td></tr>
+            <tr><th scope="row">Start date</th><td>24 August 2026</td></tr>
+            <tr><th scope="row">End date</th><td>13 November 2026</td></tr>
+            <tr><th scope="row">Duration</th><td>12 weeks</td></tr>
+            <tr><th scope="row">Training environment</th><td>University ICT and technical operations environment</td></tr>
+            <tr><th scope="row">Professional focus</th><td>Digital forensics</td></tr>
+          </tbody>
         </table>
-      </div>
-
-      <div class="focus-card" style="margin-top:20px; padding:30px;">
-        <h3>3. Responsibilities &amp; Assigned Duties</h3>
-        <p>Throughout the placement, I participated in structured learning activities and technical exercises covering computer systems, networking, operating systems, and digital forensics.</p>
-        <ul>
-          <li>Observing and learning about ICT support operations and technical services.</li>
-          <li>Studying computer hardware components, their functions, and system architecture.</li>
-          <li>Practising basic computer operations and file management.</li>
-          <li>Examining computer specifications and system information.</li>
-          <li>Learning Windows administration and basic Linux operations.</li>
-          <li>Studying networking devices, configurations, and communication protocols.</li>
-          <li>Practising basic Windows Command Prompt and Linux terminal commands.</li>
-          <li>Studying digital forensic principles and potential sources of digital evidence.</li>
-          <li>Learning about evidence preservation, forensic imaging, cryptographic hashing, and chain of custody.</li>
-          <li>Exploring foundational Python concepts and their potential applications in digital forensic automation.</li>
-          <li>Organising technical notes and documenting learning activities.</li>
-        </ul>
-      </div>
-
-      <div class="focus-card" style="margin-top:20px; padding:30px;">
-        <h3>4. Weekly Activities &amp; Tasks</h3>
-
-        <h4>Week 1 — ICT Orientation and Basic Computer Applications</h4>
-        <p><strong>Activities:</strong> Introduction to ICT Park, Microsoft Word, HTML basics, and technological operations.</p>
-        <p><strong>Focus:</strong> ICT orientation, computer applications, and introductory technical exposure.</p>
-
-        <h4>Week 2 — Revision of Previous Week's Activities</h4>
-        <p><strong>Activities:</strong> Reviewed Word operations, HTML, and ICT concepts introduced earlier.</p>
-        <p><strong>Focus:</strong> Reinforcement of foundational ICT knowledge and computer application skills.</p>
-
-        <h4>Week 3 — Computer Systems Fundamentals</h4>
-        <p><strong>Activities:</strong> Studied motherboard, CPU, RAM, HDD, PSU, UPS, ports, file management, partitions, and system information.</p>
-        <p><strong>Focus:</strong> Computer architecture, storage, system information, and potential evidence sources.</p>
-
-        <h4>Week 4 — Windows Administration</h4>
-        <p><strong>Activities:</strong> Studied Windows administration, user accounts, permissions, system services, and processes.</p>
-        <p><strong>Focus:</strong> Windows system administration and access control concepts.</p>
-
-        <h4>Week 5 — Networking Fundamentals</h4>
-        <p><strong>Activities:</strong> Studied LANs, IPv6, MAC addresses, DNS, DHCP, routers, switches, TCP/IP, TCP, UDP, and network commands.</p>
-        <p><strong>Focus:</strong> Network architecture, addressing, protocols, and communication.</p>
-
-        <h4>Week 6 — Windows and Linux Command-Line Operations</h4>
-        <p><strong>Activities:</strong> Practised Windows Command Prompt and Linux commands such as pwd, ls, cd, cat, touch, sudo, and mkdir.</p>
-        <p><strong>Focus:</strong> Command-line operations, system administration, and basic operating system management.</p>
-
-        <h4>Week 7 — Digital Forensics Fundamentals</h4>
-        <p><strong>Activities:</strong> Studied forensic investigation stages, evidence sources, metadata, and documentation.</p>
-        <p><strong>Focus:</strong> Digital forensic principles, investigation processes, and evidence sources.</p>
-
-        <h4>Week 8 — Forensic Evidence and Integrity</h4>
-        <p><strong>Activities:</strong> Learnt about hashing, MD5, SHA-256, imaging, and chain of custody.</p>
-        <p><strong>Focus:</strong> Evidence preservation, integrity verification, forensic imaging, and chain of custody.</p>
-
-        <h4>Week 9 — Introduction to Cybercrime and Case Documentation</h4>
-        <p><strong>Activities:</strong> Studied cybercrime concepts, evidence identification, and case documentation.</p>
-        <p><strong>Focus:</strong> Cybercrime investigation concepts, evidence identification, and case documentation.</p>
-
-        <h4>Week 10 — Python for Digital Forensics</h4>
-        <p><strong>Activities:</strong> Reviewed variables, loops, functions, file listing, metadata collection, hashing, and text searching tasks.</p>
-        <p><strong>Focus:</strong> Python fundamentals and introductory forensic automation concepts.</p>
-
-        <h4>Week 11 — Digital Forensics Practical Investigation</h4>
-        <p><strong>Activities:</strong> Reviewed how hardware, OS, storage, and system records can support digital investigations.</p>
-        <p><strong>Focus:</strong> Forensic examination concepts, evidence analysis, and documentation.</p>
-
-        <h4>Week 12 — Review, Reporting and Professional Practice</h4>
-        <p><strong>Activities:</strong> Reviewed system records, documentation standards, reporting, and technical summarisation.</p>
-        <p><strong>Focus:</strong> Consolidation of technical knowledge, forensic documentation, and professional practice.</p>
-      </div>
-
-      <div class="focus-card" style="margin-top:20px; padding:30px;">
-        <h3>5. Technical Skills Acquired</h3>
-
-        <h4>Computer Systems and Hardware</h4>
-        <ul>
-          <li>Understanding of computer hardware components and their functions.</li>
-          <li>Basic identification of system components and hardware interfaces.</li>
-          <li>Understanding of computer specifications and system architecture.</li>
-        </ul>
-
-        <h4>Operating Systems and System Administration</h4>
-        <ul>
-          <li>Foundational familiarity with Windows and Linux environments.</li>
-          <li>Basic command-line operations.</li>
-          <li>Understanding of user accounts, administrator privileges, permissions, processes, and services.</li>
-        </ul>
-
-        <h4>File Systems and Storage</h4>
-        <ul>
-          <li>File and folder organisation.</li>
-          <li>Understanding of file properties, extensions, and directory structures.</li>
-          <li>Foundational knowledge of HDDs, SSDs, drives, and partitions.</li>
-        </ul>
-
-        <h4>Computer Networking</h4>
-        <ul>
-          <li>Understanding of IP and MAC addressing.</li>
-          <li>Foundational knowledge of DNS, DHCP, TCP/IP, TCP, and UDP.</li>
-          <li>Understanding of network ports and networking devices.</li>
-        </ul>
-
-        <h4>Digital Forensics</h4>
-        <ul>
-          <li>Understanding of digital forensic principles and investigation stages.</li>
-          <li>Identification of potential sources of digital evidence.</li>
-          <li>Foundational knowledge of evidence preservation and integrity.</li>
-          <li>Understanding of cryptographic hashing and forensic imaging.</li>
-          <li>Knowledge of chain of custody and forensic documentation.</li>
-        </ul>
-
-        <h4>Python Programming</h4>
-        <ul>
-          <li>Introductory Python programming concepts.</li>
-          <li>Understanding of file-processing and metadata-collection applications.</li>
-          <li>Foundational knowledge of possible hashing and text-search automation.</li>
-        </ul>
-
-        <h4>Technical Documentation</h4>
-        <ul>
-          <li>Organisation of technical notes.</li>
-          <li>Recording examination information.</li>
-          <li>Understanding the importance of timestamps, evidence identification, and documenting limitations.</li>
-        </ul>
-      </div>
-
-      <div class="focus-card" style="margin-top:20px; padding:30px;">
-        <h3>6. Tools &amp; Technologies Used</h3>
-        <table style="width:100%; border-collapse:collapse; margin-top:15px;">
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3; font-weight:600;">Category</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3; font-weight:600;">Tools and Technologies</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Document Processing</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Microsoft Word</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Operating Systems</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Microsoft Windows, Linux</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Command-Line Interfaces</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Windows Command Prompt, Linux Terminal</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Programming</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Python</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">System Monitoring</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Windows Task Manager</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Storage Technologies</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">HDDs, SSDs, partitions, removable storage</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Networking Equipment</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Network switches and routers</td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">Networking Technologies</td>
-            <td style="padding:10px 12px; border:1px solid #d9e2f3;">IPv4/IPv6, MAC addressing, DNS, DHCP, TCP/IP, TCP, UDP</td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="focus-card" style="margin-top:20px; padding:30px;">
-        <h3>7. Challenges &amp; Solutions</h3>
-
-        <h4>Understanding Computer Hardware and System Architecture</h4>
-        <p><strong>Challenge:</strong> Understanding the functions and relationships of different computer hardware components.</p>
-        <p><strong>Action Taken:</strong> Studied individual components, examined computer specifications, and reviewed their functions within a computer system.</p>
-        <p><strong>Learning Outcome:</strong> Improved understanding of computer architecture and hardware components.</p>
-
-        <h4>Understanding Networking Concepts</h4>
-        <p><strong>Challenge:</strong> Understanding IP addressing, network protocols, DNS, DHCP, and network communication.</p>
-        <p><strong>Action Taken:</strong> Reviewed networking fundamentals and practised basic network commands.</p>
-        <p><strong>Learning Outcome:</strong> Developed foundational knowledge of network communication and configuration.</p>
-
-        <h4>Learning Command-Line Operations</h4>
-        <p><strong>Challenge:</strong> Becoming familiar with Windows and Linux command-line environments.</p>
-        <p><strong>Action Taken:</strong> Practised basic commands for navigation, file management, and system information.</p>
-        <p><strong>Learning Outcome:</strong> Improved familiarity with command-line operations and their potential forensic applications.</p>
-
-        <h4>Understanding Digital Evidence Integrity</h4>
-        <p><strong>Challenge:</strong> Understanding how digital evidence can be altered and why its integrity must be maintained.</p>
-        <p><strong>Action Taken:</strong> Studied cryptographic hashing, forensic imaging, and chain-of-custody procedures.</p>
-        <p><strong>Learning Outcome:</strong> Developed an understanding of evidence integrity and proper forensic handling principles.</p>
-
-        <h4>Understanding Python Applications in Digital Forensics</h4>
-        <p><strong>Challenge:</strong> Connecting foundational programming concepts with practical forensic tasks.</p>
-        <p><strong>Action Taken:</strong> Reviewed Python concepts and examined their possible applications in file listing, metadata collection, hashing, and text searching.</p>
-        <p><strong>Learning Outcome:</strong> Developed an introductory understanding of Python's potential role in forensic automation.</p>
-      </div>
-
-      <div class="focus-card" style="margin-top:20px; padding:30px;">
-        <h3>8. Learning Outcomes</h3>
-        <ul>
-          <li><strong>Computer Systems Knowledge:</strong> Developed a foundational understanding of computer hardware, operating systems, storage devices, and system architecture.</li>
-          <li><strong>Operating System Familiarity:</strong> Improved understanding of Windows and Linux environments, including basic system administration and command-line operations.</li>
-          <li><strong>Networking Knowledge:</strong> Developed foundational knowledge of computer networking, addressing, protocols, and network communication.</li>
-          <li><strong>Digital Forensics Knowledge:</strong> Gained an understanding of digital forensic principles, investigation stages, and potential sources of digital evidence.</li>
-          <li><strong>Evidence Integrity Awareness:</strong> Developed an understanding of cryptographic hashing, forensic imaging, evidence preservation, and chain of custody.</li>
-          <li><strong>Python Programming Foundation:</strong> Acquired introductory knowledge of Python and its potential use in automating selected digital forensic tasks.</li>
-          <li><strong>Technical Documentation:</strong> Improved the ability to organise technical information, document activities, and record findings and limitations.</li>
-          <li><strong>Professional Development:</strong> Strengthened technical learning habits, analytical thinking, problem-solving, and understanding of professional responsibilities.</li>
-        </ul>
-      </div>
-
-      <div class="focus-card" style="margin-top:20px; padding:30px;">
-        <h3>9. Overall SIWES Experience</h3>
-        <p>
-          The SIWES placement at Gombe State University – ICT Park provided an opportunity
-          to develop foundational knowledge of computer systems, networking, operating systems,
-          and digital forensics.
-        </p>
-        <p>
-          The training progressed from general ICT orientation and computer operations to networking,
-          system administration, digital evidence integrity, Python fundamentals, and professional documentation.
-        </p>
-        <p>
-          It established a foundation for further professional development in digital forensic examination,
-          evidence analysis, forensic automation, and technical reporting.
-        </p>
       </div>
     </section>
 
-    <section style="margin-top:60px" aria-labelledby="siwes-docs-title">
-      <h2 id="siwes-docs-title">Supporting Documentation</h2>
-      <p class="hero-text">The SIWES 2026–2027 document is available below.</p>
-      <div class="focus-grid" style="margin-top:30px;grid-template-columns:repeat(2,minmax(0,1fr))">
-        <article class="focus-card">
-          <h3>SIWES 2026–2027</h3>
-          <p>Open or download the supplied SIWES PDF document.</p>
-          <a href="assets/documents/SIWES%202026-2027.pdf" target="_blank" rel="noopener noreferrer">
-            View SIWES document <span aria-hidden="true">↗</span>
-          </a>
+    <section class="experience-section" id="responsibilities">
+      <h2>Responsibilities &amp; Learning Activities</h2>
+      <p class="section-intro">
+        The placement involved structured learning activities and technical exercises covering
+        computer systems, networking, operating systems, and digital forensics.
+      </p>
+      <article class="experience-card">
+        <ul class="skill-list">
+          <li>Observed and learned about ICT support operations and technical services.</li>
+          <li>Studied computer hardware components, their functions, and system architecture.</li>
+          <li>Practised basic computer operations and file management.</li>
+          <li>Examined computer specifications and system information.</li>
+          <li>Learned Windows administration and basic Linux operations.</li>
+          <li>Studied networking devices, configurations, and communication protocols.</li>
+          <li>Practised basic Windows Command Prompt and Linux terminal commands.</li>
+          <li>Studied digital forensic principles and potential sources of digital evidence.</li>
+          <li>Learned about evidence preservation, forensic imaging, hashing, and chain of custody.</li>
+          <li>Explored foundational Python concepts and their possible forensic applications.</li>
+          <li>Organised technical notes and documented learning activities.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="experience-section" id="weekly-activities">
+      <h2>Weekly Activities &amp; Tasks</h2>
+      <p class="section-intro">
+        Select a week to expand its activities. You can open multiple weeks at the same time.
+      </p>
+
+      <div class="week-list">
+        <details class="week-item">
+          <summary>Week 1 — ICT Orientation and Basic Computer Applications</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Introduction to the ICT Park environment and its operations.</li>
+              <li>Introduction to Microsoft Word and document formatting, with practical exercises.</li>
+              <li>Introduction to basic HTML concepts.</li>
+              <li>Discussion of ICT services, technical operations, and professional development.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> ICT orientation, computer applications, and introductory technical exposure.</p>
+          </div>
+        </details>
+
+        <details class="week-item">
+          <summary>Week 2 — Revision of Previous Week's Activities</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Reviewed Week 1 concepts and practical exercises.</li>
+              <li>Revised Microsoft Word operations and document formatting.</li>
+              <li>Reviewed introductory HTML concepts and the ICT environment.</li>
+              <li>Consolidated previously introduced concepts through revision and practice.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> Reinforcement of foundational ICT knowledge and computer application skills.</p>
+          </div>
+        </details>
+
+        <details class="week-item">
+          <summary>Week 3 — Computer Systems Fundamentals</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Studied the motherboard, CPU, RAM, HDD, PSU, and UPS.</li>
+              <li>Identified computer ports and hardware interfaces.</li>
+              <li>Practised file and folder management and examined file properties and extensions.</li>
+              <li>Studied system information, storage devices, and disk partitions.</li>
+              <li>Examined Task Manager information for CPU, memory, disk, and network use.</li>
+              <li>Reviewed how systems and storage may contain potential digital evidence.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> Computer architecture, storage, system information, and potential evidence sources.</p>
+          </div>
+        </details>
+
+        <details class="week-item">
+          <summary>Week 4 — Windows Administration</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Studied Windows operating system administration and system configuration.</li>
+              <li>Learned about user accounts and administrator privileges.</li>
+              <li>Studied file and folder permissions, Windows processes, and system services.</li>
+              <li>Examined the relevance of system administration to digital forensic investigations.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> Windows system administration and access control concepts.</p>
+          </div>
+        </details>
+
+        <details class="week-item">
+          <summary>Week 5 — Networking Fundamentals</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Studied LANs, clients, servers, and network devices.</li>
+              <li>Learned about IPv6 addressing and MAC addresses.</li>
+              <li>Examined network configuration information, DNS, and DHCP.</li>
+              <li>Reviewed the functions of routers and switches.</li>
+              <li>Studied TCP/IP, TCP, UDP, and common network ports.</li>
+              <li>Practised basic commands for viewing IP configuration and connection information.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> Network architecture, addressing, protocols, and communication.</p>
+          </div>
+        </details>
+
+        <details class="week-item">
+          <summary>Week 6 — Windows and Linux Command-Line Operations</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Practised Windows Command Prompt commands for navigation and file management.</li>
+              <li>Reviewed user accounts, privileges, permissions, processes, and services.</li>
+              <li>Introduced Linux command-line operations.</li>
+              <li>Practised <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>touch</code>, <code>sudo</code>, and <code>mkdir</code>.</li>
+              <li>Reviewed command-line and system information in a forensic context.</li>
+              <li>Participated in activities involving software installation, computer specifications, and networking devices.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> Command-line operations, system administration, and basic operating system management.</p>
+          </div>
+        </details>
+
+        <details class="week-item">
+          <summary>Week 7 — Digital Forensics Fundamentals</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Studied the meaning, purpose, and importance of digital forensics.</li>
+              <li>Reviewed the stages of a digital forensic investigation.</li>
+              <li>Identified potential sources of digital evidence.</li>
+              <li>Studied files, storage devices, system logs, browser records, and metadata as potential evidence sources.</li>
+              <li>Reviewed evidence preservation, integrity, examination, and reporting.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> Digital forensic principles, investigation processes, and evidence sources.</p>
+          </div>
+        </details>
+
+        <details class="week-item">
+          <summary>Week 8 — Forensic Evidence and Integrity</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Studied digital evidence and the importance of maintaining its integrity.</li>
+              <li>Learned about cryptographic hashing, including MD5 and SHA-256.</li>
+              <li>Studied forensic imaging and the distinction between original storage devices and forensic images.</li>
+              <li>Reviewed chain-of-custody procedures.</li>
+              <li>Studied documentation of evidence identification, collection, handling, storage, and examination.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> Evidence preservation, integrity verification, forensic imaging, and chain of custody.</p>
+          </div>
+        </details>
+
+        <details class="week-item">
+          <summary>Week 9 — Introduction to Cybercrime and Case Documentation</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Studied introductory concepts of cybercrime and cybercrime investigation.</li>
+              <li>Reviewed common sources of digital evidence and their relevance to incidents.</li>
+              <li>Examined evidence identification and documentation.</li>
+              <li>Reviewed the structure and purpose of investigation case records.</li>
+              <li>Learned about organising investigative information and documenting findings.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> Cybercrime investigation concepts, evidence identification, and case documentation.</p>
+          </div>
+        </details>
+
+        <details class="week-item">
+          <summary>Week 10 — Python for Digital Forensics</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Reviewed variables, data types, conditions, loops, and basic functions.</li>
+              <li>Examined possible Python applications in digital forensic automation.</li>
+              <li>Reviewed file listing and directory traversal concepts.</li>
+              <li>Studied how Python may support metadata collection, hashing, and text searching.</li>
+              <li>Considered how automation can support repetitive forensic tasks.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> Python fundamentals and introductory forensic automation concepts.</p>
+          </div>
+        </details>
+
+        <details class="week-item">
+          <summary>Week 11 — Digital Forensics Practical Investigation</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Reviewed the relationship between computer hardware, operating systems, and digital evidence.</li>
+              <li>Studied storage devices and potential evidence sources.</li>
+              <li>Reviewed digital forensic examination concepts.</li>
+              <li>Examined how files, metadata, and system records may support an investigation.</li>
+              <li>Reviewed evidence integrity, documentation, and recording examination activities.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> Forensic examination concepts, evidence analysis, and documentation.</p>
+          </div>
+        </details>
+
+        <details class="week-item">
+          <summary>Week 12 — Review, Reporting and Professional Practice</summary>
+          <div class="week-content">
+            <h4>Activities</h4>
+            <ul>
+              <li>Reviewed hardware, operating systems, storage, files, and system logs as potential sources of forensic information.</li>
+              <li>Reviewed Python automation concepts and possible forensic applications.</li>
+              <li>Practised organising notes and sample examination results into clear records.</li>
+              <li>Reviewed accurate timestamps, evidence identification, and documenting limitations.</li>
+              <li>Summarised technical concepts and skills studied throughout the programme.</li>
+            </ul>
+            <p class="week-focus"><strong>Focus:</strong> Consolidation of technical knowledge, forensic documentation, reporting, and professional practice.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="experience-section" id="skills">
+      <h2>Technical Skills Acquired</h2>
+      <div class="experience-grid">
+        <article class="experience-card">
+          <h3>Computer Systems &amp; Hardware</h3>
+          <ul class="skill-list">
+            <li>Understanding of computer hardware components and their functions.</li>
+            <li>Basic identification of system components and hardware interfaces.</li>
+            <li>Foundational understanding of computer specifications and system architecture.</li>
+          </ul>
+        </article>
+
+        <article class="experience-card">
+          <h3>Operating Systems &amp; Administration</h3>
+          <ul class="skill-list">
+            <li>Foundational familiarity with Windows and Linux environments.</li>
+            <li>Basic command-line operations.</li>
+            <li>Understanding of accounts, permissions, processes, and services.</li>
+          </ul>
+        </article>
+
+        <article class="experience-card">
+          <h3>Files, Storage &amp; Networking</h3>
+          <ul class="skill-list">
+            <li>File and folder organisation, file properties, and directory structures.</li>
+            <li>Foundational knowledge of HDDs, SSDs, drives, and partitions.</li>
+            <li>Foundational knowledge of IP/MAC addressing, DNS, DHCP, TCP/IP, TCP, and UDP.</li>
+          </ul>
+        </article>
+
+        <article class="experience-card">
+          <h3>Digital Forensics &amp; Documentation</h3>
+          <ul class="skill-list">
+            <li>Understanding of forensic principles and investigation stages.</li>
+            <li>Foundational knowledge of evidence preservation, hashing, and forensic imaging.</li>
+            <li>Awareness of chain of custody and forensic documentation.</li>
+            <li>Organisation of technical notes and examination information.</li>
+          </ul>
+        </article>
+
+        <article class="experience-card">
+          <h3>Python Programming</h3>
+          <ul class="skill-list">
+            <li>Introductory programming concepts.</li>
+            <li>Understanding of potential file-processing and metadata-collection applications.</li>
+            <li>Foundational knowledge of possible hashing and text-search automation.</li>
+          </ul>
         </article>
       </div>
     </section>
 
-    <section style="margin-top:60px">
-      <h2>Future Relevant Experience</h2>
-      <p class="hero-text">
-        This page can be extended with verified internships, industrial attachments,
-        research placements, and other professional experience.
+    <section class="experience-section" id="tools">
+      <h2>Tools &amp; Technologies</h2>
+      <p class="section-intro">
+        This list reflects the tools and technologies described in the training activities.
+        Specialist forensic software is not listed because its use has not been confirmed.
       </p>
+      <div class="detail-table-wrap">
+        <table class="detail-table">
+          <tbody>
+            <tr><th scope="row">Document processing</th><td>Microsoft Word</td></tr>
+            <tr><th scope="row">Operating systems</th><td>Microsoft Windows, Linux</td></tr>
+            <tr><th scope="row">Command-line interfaces</th><td>Windows Command Prompt, Linux Terminal</td></tr>
+            <tr><th scope="row">Programming</th><td>Python</td></tr>
+            <tr><th scope="row">System monitoring</th><td>Windows Task Manager</td></tr>
+            <tr><th scope="row">Storage technologies</th><td>HDDs, SSDs, partitions, removable storage</td></tr>
+            <tr><th scope="row">Networking equipment</th><td>Network switches and routers</td></tr>
+            <tr><th scope="row">Networking technologies</th><td>IPv4/IPv6, MAC addressing, DNS, DHCP, TCP/IP, TCP, UDP</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="experience-section" id="challenges">
+      <h2>Challenges &amp; Learning Responses</h2>
+      <div class="experience-grid">
+        <article class="experience-card">
+          <h3>Computer Hardware &amp; Architecture</h3>
+          <p><strong>Challenge:</strong> Understanding the functions and relationships of computer components.</p>
+          <p><strong>Response:</strong> Studied components individually, examined specifications, and reviewed their roles in a computer system.</p>
+          <p><strong>Outcome:</strong> Improved foundational understanding of computer architecture.</p>
+        </article>
+
+        <article class="experience-card">
+          <h3>Networking Concepts</h3>
+          <p><strong>Challenge:</strong> Understanding addressing, protocols, DNS, DHCP, and network communication.</p>
+          <p><strong>Response:</strong> Reviewed networking fundamentals and practised basic network commands.</p>
+          <p><strong>Outcome:</strong> Developed foundational knowledge of network communication.</p>
+        </article>
+
+        <article class="experience-card">
+          <h3>Command-Line Operations</h3>
+          <p><strong>Challenge:</strong> Becoming familiar with Windows and Linux command-line environments.</p>
+          <p><strong>Response:</strong> Practised basic commands for navigation, file management, and system information.</p>
+          <p><strong>Outcome:</strong> Improved familiarity with command-line operations.</p>
+        </article>
+
+        <article class="experience-card">
+          <h3>Digital Evidence Integrity</h3>
+          <p><strong>Challenge:</strong> Understanding how digital evidence can be altered and why integrity matters.</p>
+          <p><strong>Response:</strong> Studied hashing, forensic imaging, and chain-of-custody procedures.</p>
+          <p><strong>Outcome:</strong> Developed an understanding of evidence integrity and forensic handling principles.</p>
+        </article>
+
+        <article class="experience-card">
+          <h3>Python &amp; Forensic Applications</h3>
+          <p><strong>Challenge:</strong> Connecting programming concepts with possible forensic tasks.</p>
+          <p><strong>Response:</strong> Reviewed possible uses in file listing, metadata collection, hashing, and text searching.</p>
+          <p><strong>Outcome:</strong> Developed introductory awareness of Python's potential role in forensic automation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience-section" id="outcomes">
+      <h2>Learning Outcomes</h2>
+      <article class="experience-card">
+        <ul class="skill-list">
+          <li><strong>Computer systems:</strong> Foundational understanding of hardware, operating systems, storage, and system architecture.</li>
+          <li><strong>Operating systems:</strong> Improved familiarity with Windows and Linux, basic administration, and command-line operations.</li>
+          <li><strong>Networking:</strong> Foundational knowledge of addressing, protocols, and network communication.</li>
+          <li><strong>Digital forensics:</strong> Understanding of forensic principles, investigation stages, and potential evidence sources.</li>
+          <li><strong>Evidence integrity:</strong> Understanding of hashing, forensic imaging, evidence preservation, and chain of custody.</li>
+          <li><strong>Python:</strong> Introductory knowledge of Python and its possible use in selected forensic tasks.</li>
+          <li><strong>Documentation:</strong> Improved ability to organise technical information and record findings and limitations.</li>
+          <li><strong>Professional development:</strong> Strengthened analytical thinking, problem-solving, and technical learning habits.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="experience-section" id="documents">
+      <h2>Supporting Documentation</h2>
+      <p class="section-intro">The supplied SIWES document is available below.</p>
+      <article class="experience-card" style="margin-top:20px">
+        <h3>SIWES 2026–2027</h3>
+        <p>Open or download the supplied SIWES PDF document.</p>
+        <a class="document-link" href="assets/documents/SIWES%202026-2027.pdf" target="_blank" rel="noopener noreferrer">
+          View SIWES document <span aria-hidden="true">↗</span>
+        </a>
+      </article>
+    </section>
+
+    <section class="experience-section">
+      <h2>Overall Experience</h2>
+      <p class="section-intro">
+        The SIWES placement at Gombe State University – ICT Park provided an opportunity to
+        develop foundational knowledge of computer systems, networking, operating systems,
+        and digital forensics. The training progressed from general ICT orientation and computer
+        operations to networking, system administration, digital evidence integrity, Python
+        fundamentals, and professional documentation. It established a foundation for further
+        development in digital forensic examination, evidence analysis, forensic automation,
+        and technical reporting.
+      </p>
+      <a class="back-to-top" href="#top">Back to top ↑</a>
     </section>
   </main>
 
