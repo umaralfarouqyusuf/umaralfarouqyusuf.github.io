@@ -7,6 +7,10 @@
 
 This library organizes the supplied DFLAB infrastructure pack according to the agreed folder structure. Records distinguish user-reported information, proposed plans, pending work and completed tests. A status of “reported” is not independent verification. Replace bracketed fields only with evidence from actual work; do not represent planned work as complete.
 
+## Project documentation standard
+
+DFLAB and all other published projects in this portfolio follow the [Project Documentation Standard](PROJECT_DOCUMENTATION_STANDARD.md). Use the [Project Record Template](PROJECT_RECORD_TEMPLATE.md) for project entries. Projects must cover their title, overview, objectives, scope, tools and technologies, methodology, practical procedures, findings and observations, supporting screenshots/evidence, report or documentation, and status. Clearly label simulated exercises, training datasets and laboratory experiments.
+
 ## Browse the library
 
 Open [`index.html`](index.html) for the website document catalogue. Documents are maintained as Markdown source records; the catalogue links to their rendered GitHub view and raw downloadable file.
