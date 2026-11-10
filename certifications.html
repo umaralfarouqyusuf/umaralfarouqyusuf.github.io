@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Certifications, technical courses, training, workshops, seminars, and CTF participation of Umar Alfarouq Yusuf.">
+  <meta name="description" content="Cybersecurity certifications, technical courses, training, and CTF participation of Umar Alfarouq Yusuf.">
   <meta name="theme-color" content="#08111f">
   <title>Certifications &amp; Training | Umar Alfarouq Yusuf</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
@@ -25,34 +26,51 @@
     .credentials-hero .hero-text { max-width: 760px; color: #cbd5e1; line-height: 1.8; }
     .credentials-eyebrow { color: #7dd3fc; font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
     .credentials-nav {
-      position: sticky; top: 0; z-index: 20; display: flex; gap: 7px; overflow-x: auto;
-      margin: 22px 0 44px; padding: 11px; border: 1px solid rgba(148, 163, 184, .18);
+      position: sticky; top: 10px; z-index: 20; display: flex; gap: 7px; overflow-x: auto;
+      margin: 22px 0 44px; padding: 10px; border: 1px solid rgba(148, 163, 184, .18);
       border-radius: 14px; background: rgba(8, 17, 31, .95); backdrop-filter: blur(12px); scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
     }
-    .credentials-nav a { flex: 0 0 auto; padding: 9px 13px; border-radius: 9px; color: #cbd5e1; font-size: .9rem; text-decoration: none; transition: background .2s ease, color .2s ease; }
+    .credentials-nav a { flex: 0 0 auto; padding: 10px 13px; border-radius: 9px; color: #cbd5e1; font-size: .9rem; text-decoration: none; transition: background .2s ease, color .2s ease; }
     .credentials-nav a:hover, .credentials-nav a:focus-visible { outline: none; background: rgba(56, 189, 248, .14); color: #7dd3fc; }
     .credential-section { margin-top: 52px; scroll-margin-top: 96px; }
     .credential-section h2 { margin-bottom: 10px; font-family: "Space Grotesk", sans-serif; font-size: clamp(1.55rem, 3.5vw, 2rem); }
     .section-description { max-width: 760px; color: var(--muted, #aebccd); line-height: 1.75; }
     .credential-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
-    .credential-card { display: flex; flex-direction: column; padding: 24px; border: 1px solid var(--line, rgba(148, 163, 184, .2)); border-radius: 16px; background: var(--panel, rgba(15, 23, 42, .62)); }
+    .credential-grid--featured { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .credential-card { display: flex; min-width: 0; flex-direction: column; padding: 24px; border: 1px solid var(--line, rgba(148, 163, 184, .2)); border-radius: 16px; background: var(--panel, rgba(15, 23, 42, .62)); }
+    .credential-card--featured { border-color: rgba(56, 189, 248, .35); background: linear-gradient(145deg, rgba(56, 189, 248, .09), var(--panel, rgba(15, 23, 42, .62)) 58%); }
     .credential-type { margin: 0 0 10px; color: var(--cyan, #38bdf8); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-    .credential-card h3 { margin: 0 0 15px; font-family: "Space Grotesk", sans-serif; font-size: 1.25rem; line-height: 1.35; }
+    .credential-card h3 { margin: 0 0 15px; font-family: "Space Grotesk", sans-serif; font-size: 1.2rem; line-height: 1.4; overflow-wrap: anywhere; }
     .credential-details { display: grid; gap: 7px; margin: 0; }
-    .credential-details p { margin: 0; color: var(--muted, #aebccd); font-size: .94rem; line-height: 1.6; }
+    .credential-details p { margin: 0; color: var(--muted, #aebccd); font-size: .94rem; line-height: 1.6; overflow-wrap: anywhere; }
     .credential-details strong { color: var(--ink, #f8fafc); }
     .credential-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 20px; }
     .credential-button {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px;
       padding: 10px 15px; border: 1px solid rgba(56, 189, 248, .35); border-radius: 9px;
       background: rgba(56, 189, 248, .1); color: #bae6fd; font-size: .9rem; font-weight: 700;
-      text-decoration: none; transition: background .2s ease, border-color .2s ease, transform .2s ease;
+      text-align: center; text-decoration: none; transition: background .2s ease, border-color .2s ease, transform .2s ease;
     }
     .credential-button:hover, .credential-button:focus-visible { border-color: rgba(56, 189, 248, .75); outline: none; background: rgba(56, 189, 248, .2); transform: translateY(-1px); }
     .credential-button--download { background: transparent; color: #cbd5e1; }
     .back-to-top { display: inline-block; margin-top: 28px; color: #7dd3fc; text-decoration: none; }
     .back-to-top:hover { text-decoration: underline; }
-    @media (max-width: 720px) { .credentials-main { padding-top: 38px; } .credential-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) {
+      .credential-grid--featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .credentials-main { padding-top: 38px; padding-bottom: 64px; }
+      .credential-section { margin-top: 40px; }
+      .credential-grid, .credential-grid--featured { grid-template-columns: 1fr; gap: 14px; }
+      .credential-card { padding: 20px; }
+    }
+    @media (max-width: 420px) {
+      .credentials-hero { padding: 24px 20px; }
+      .credentials-nav { margin-bottom: 34px; }
+      .credential-actions { display: grid; grid-template-columns: 1fr; }
+      .credential-button { width: 100%; }
+    }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
   </style>
 </head>
@@ -82,19 +100,45 @@
     <section class="credentials-hero" aria-labelledby="page-title">
       <p class="credentials-eyebrow">Professional Development</p>
       <h1 id="page-title">Certifications &amp; Training</h1>
-      <p class="hero-text">A record of cybersecurity courses, CTF participation, training programmes, workshops, and seminars. Where a certificate PDF is available, you can view it in your browser or download a copy.</p>
+      <p class="hero-text">A record of cybersecurity courses, CTF participation, and awareness training. View available certificate PDFs in your browser or download a copy.</p>
     </section>
 
     <nav class="credentials-nav" aria-label="Credential categories">
+      <a href="#featured">Featured</a>
       <a href="#ctf">CTF Participation</a>
       <a href="#courses">Courses &amp; Certifications</a>
-      <a href="#programmes">Programmes &amp; Events</a>
-      <a href="#verification">Verification</a>
+      <a href="#programmes">Training &amp; Awareness</a>
+      <a href="#verification">Notes</a>
     </nav>
+
+    <section class="credential-section" id="featured" aria-labelledby="featured-title">
+      <h2 id="featured-title">Featured Credentials</h2>
+      <p class="section-description">A selection highlighting practical competition experience and core cybersecurity learning.</p>
+      <div class="credential-grid credential-grid--featured">
+        <article class="credential-card credential-card--featured">
+          <p class="credential-type">CTF participation</p>
+          <h3>Null Origin CTF 2026</h3>
+          <div class="credential-details"><p><strong>Issuer:</strong> CyberHX</p><p><strong>Credential:</strong> Participation certificate</p></div>
+          <div class="credential-actions"><a class="credential-button" href="assets/documents/certificates/CYBERHX%20-%202026%20Null%20Origin%20CTF.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="credential-card credential-card--featured">
+          <p class="credential-type">Technical course</p>
+          <h3>Critical Infrastructure Protection</h3>
+          <div class="credential-details"><p><strong>Issuer:</strong> OPSWAT</p><p><strong>Course:</strong> Introduction to Critical Infrastructure Protection</p></div>
+          <div class="credential-actions"><a class="credential-button" href="assets/documents/certificates/Opswat%20-%20Introduction%20to%20Critical%20Infrastructure%20Protection.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="credential-card credential-card--featured">
+          <p class="credential-type">Technical course</p>
+          <h3>Introduction to Cybersecurity</h3>
+          <div class="credential-details"><p><strong>Issuer:</strong> Cisco Networking Academy</p><p><strong>Focus:</strong> Cybersecurity fundamentals</p></div>
+          <div class="credential-actions"><a class="credential-button" href="assets/documents/certificates/Cisco%20-%20Introduction%20to%20Cybersecurity.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </section>
 
     <section class="credential-section" id="ctf">
       <h2>Capture-the-Flag Participation</h2>
-      <p class="section-description">Cybersecurity competition participation is listed separately from formal certifications and course credentials.</p>
+      <p class="section-description">Competition participation is listed separately from course credentials.</p>
       <div class="credential-grid">
         <article class="credential-card">
           <p class="credential-type">Participation certificate</p>
@@ -106,19 +150,16 @@
             <p><strong>Certificate ID:</strong> NO-2026-071331</p>
           </div>
           <div class="credential-actions">
-            <a class="credential-button" href="assets/documents/certificates/CYBERHX%20-%202026%20Null%20Origin%20CTF.pdf" target="_blank" rel="noopener noreferrer">View PDF <span aria-hidden="true">↗</span></a>
+            <a class="credential-button" href="assets/documents/certificates/CYBERHX%20-%202026%20Null%20Origin%20CTF.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a>
             <a class="credential-button credential-button--download" href="assets/documents/certificates/CYBERHX%20-%202026%20Null%20Origin%20CTF.pdf" download>Download PDF</a>
           </div>
         </article>
         <article class="credential-card">
           <p class="credential-type">CTF participation</p>
-          <h3>Holmes CTF 2025</h3>
-          <div class="credential-details">
-            <p><strong>Platform:</strong> Hack The Box (HTB)</p>
-            <p><strong>Dates:</strong> 22–26 September 2025</p>
-          </div>
+          <h3>Holmes Capture the Flag</h3>
+          <div class="credential-details"><p><strong>Platform:</strong> Hack The Box (HTB)</p><p><strong>Dates:</strong> 22–26 September 2025</p></div>
           <div class="credential-actions">
-            <a class="credential-button" href="assets/documents/certificates/Holmes%20Capture%20The%20Flag%20(CTF).pdf" target="_blank" rel="noopener noreferrer">View PDF <span aria-hidden="true">↗</span></a>
+            <a class="credential-button" href="assets/documents/certificates/Holmes%20Capture%20The%20Flag%20(CTF).pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a>
             <a class="credential-button credential-button--download" href="assets/documents/certificates/Holmes%20Capture%20The%20Flag%20(CTF).pdf" download>Download PDF</a>
           </div>
         </article>
@@ -127,84 +168,63 @@
 
     <section class="credential-section" id="courses">
       <h2>Technical Courses &amp; Certifications</h2>
-      <p class="section-description">Completed technical learning activities and course credentials.</p>
+      <p class="section-description">Cybersecurity courses and technical learning credentials.</p>
       <div class="credential-grid">
         <article class="credential-card">
           <p class="credential-type">Technical course</p>
           <h3>Introduction to Critical Infrastructure Protection</h3>
           <div class="credential-details"><p><strong>Issuer:</strong> OPSWAT Academy</p><p><strong>Completed:</strong> 29 September 2025</p></div>
-          <div class="credential-actions">
-            <a class="credential-button" href="assets/documents/certificates/Opswat%20-%20Introduction%20to%20Critical%20Infrastructure%20Protection.pdf" target="_blank" rel="noopener noreferrer">View PDF <span aria-hidden="true">↗</span></a>
-            <a class="credential-button credential-button--download" href="assets/documents/certificates/Opswat%20-%20Introduction%20to%20Critical%20Infrastructure%20Protection.pdf" download>Download PDF</a>
-          </div>
+          <div class="credential-actions"><a class="credential-button" href="assets/documents/certificates/Opswat%20-%20Introduction%20to%20Critical%20Infrastructure%20Protection.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a><a class="credential-button credential-button--download" href="assets/documents/certificates/Opswat%20-%20Introduction%20to%20Critical%20Infrastructure%20Protection.pdf" download>Download PDF</a></div>
         </article>
         <article class="credential-card">
           <p class="credential-type">Technical course</p>
           <h3>CrowdSec Threat Intelligence</h3>
           <div class="credential-details"><p><strong>Issuer:</strong> CrowdSec Academy</p><p><strong>Completed:</strong> 11 July 2025</p></div>
-          <div class="credential-actions">
-            <a class="credential-button" href="assets/documents/certificates/CrowdSec%20-%20CrowdSec%20Threat%20Intelligence.pdf" target="_blank" rel="noopener noreferrer">View PDF <span aria-hidden="true">↗</span></a>
-            <a class="credential-button credential-button--download" href="assets/documents/certificates/CrowdSec%20-%20CrowdSec%20Threat%20Intelligence.pdf" download>Download PDF</a>
-          </div>
+          <div class="credential-actions"><a class="credential-button" href="assets/documents/certificates/CrowdSec%20-%20CrowdSec%20Threat%20Intelligence.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a><a class="credential-button credential-button--download" href="assets/documents/certificates/CrowdSec%20-%20CrowdSec%20Threat%20Intelligence.pdf" download>Download PDF</a></div>
         </article>
         <article class="credential-card">
           <p class="credential-type">Technical course</p>
           <h3>Introduction to Cybersecurity</h3>
           <div class="credential-details"><p><strong>Issuer:</strong> Cisco Networking Academy</p><p><strong>Completed:</strong> 11 July 2025</p></div>
-          <div class="credential-actions">
-            <a class="credential-button" href="assets/documents/certificates/Cisco%20-%20Introduction%20to%20Cybersecurity.pdf" target="_blank" rel="noopener noreferrer">View PDF <span aria-hidden="true">↗</span></a>
-            <a class="credential-button credential-button--download" href="assets/documents/certificates/Cisco%20-%20Introduction%20to%20Cybersecurity.pdf" download>Download PDF</a>
-          </div>
+          <div class="credential-actions"><a class="credential-button" href="assets/documents/certificates/Cisco%20-%20Introduction%20to%20Cybersecurity.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a><a class="credential-button credential-button--download" href="assets/documents/certificates/Cisco%20-%20Introduction%20to%20Cybersecurity.pdf" download>Download PDF</a></div>
         </article>
         <article class="credential-card">
           <p class="credential-type">Technical course</p>
           <h3>Introduction to Cybersecurity</h3>
           <div class="credential-details"><p><strong>Issuer:</strong> Great Learning Academy</p><p><strong>Completed:</strong> August 2024</p></div>
-          <div class="credential-actions">
-            <a class="credential-button" href="assets/documents/certificates/Great%20Learning%20-%20Introduction%20to%20Cybersecurity.pdf" target="_blank" rel="noopener noreferrer">View PDF <span aria-hidden="true">↗</span></a>
-            <a class="credential-button credential-button--download" href="assets/documents/certificates/Great%20Learning%20-%20Introduction%20to%20Cybersecurity.pdf" download>Download PDF</a>
-          </div>
+          <div class="credential-actions"><a class="credential-button" href="assets/documents/certificates/Great%20Learning%20-%20Introduction%20to%20Cybersecurity.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a><a class="credential-button credential-button--download" href="assets/documents/certificates/Great%20Learning%20-%20Introduction%20to%20Cybersecurity.pdf" download>Download PDF</a></div>
         </article>
         <article class="credential-card">
           <p class="credential-type">Technical course</p>
-          <h3>Community Driven Cybersecurity</h3>
+          <h3>Community-Driven Cybersecurity</h3>
           <div class="credential-details"><p><strong>Issuer:</strong> CrowdSec Academy</p><p><strong>Completed:</strong> 21 July 2023</p></div>
-          <div class="credential-actions">
-            <a class="credential-button" href="assets/documents/certificates/CrowdSec%20-%20Community%20Driven%20Cybersecurity.pdf" target="_blank" rel="noopener noreferrer">View PDF <span aria-hidden="true">↗</span></a>
-            <a class="credential-button credential-button--download" href="assets/documents/certificates/CrowdSec%20-%20Community%20Driven%20Cybersecurity.pdf" download>Download PDF</a>
-          </div>
+          <div class="credential-actions"><a class="credential-button" href="assets/documents/certificates/CrowdSec%20-%20Community%20Driven%20Cybersecurity.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a><a class="credential-button credential-button--download" href="assets/documents/certificates/CrowdSec%20-%20Community%20Driven%20Cybersecurity.pdf" download>Download PDF</a></div>
         </article>
       </div>
     </section>
 
     <section class="credential-section" id="programmes">
-      <h2>Training Programmes, Workshops &amp; Seminars</h2>
-      <p class="section-description">Seminars and awareness events are presented as participation or training, not as formal certifications unless the issuing organisation identifies them as such.</p>
+      <h2>Training &amp; Security Awareness</h2>
+      <p class="section-description">Additional cybersecurity learning and awareness credentials.</p>
       <div class="credential-grid">
         <article class="credential-card">
           <p class="credential-type">Technical course</p>
           <h3>Introduction to Cybersecurity</h3>
           <div class="credential-details"><p><strong>Issuer:</strong> AirtificialX Tech Ltd.</p></div>
-          <div class="credential-actions">
-            <a class="credential-button" href="assets/documents/certificates/AirtificialX%20Tech%20Ltd.%20-%20Introduction%20to%20Cybersecurity.pdf" target="_blank" rel="noopener noreferrer">View PDF <span aria-hidden="true">↗</span></a>
-            <a class="credential-button credential-button--download" href="assets/documents/certificates/AirtificialX%20Tech%20Ltd.%20-%20Introduction%20to%20Cybersecurity.pdf" download>Download PDF</a>
-          </div>
+          <div class="credential-actions"><a class="credential-button" href="assets/documents/certificates/AirtificialX%20Tech%20Ltd.%20-%20Introduction%20to%20Cybersecurity.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a><a class="credential-button credential-button--download" href="assets/documents/certificates/AirtificialX%20Tech%20Ltd.%20-%20Introduction%20to%20Cybersecurity.pdf" download>Download PDF</a></div>
         </article>
         <article class="credential-card">
-          <p class="credential-type">Awareness training</p>
+          <p class="credential-type">Security awareness</p>
           <h3>Think Before You Click</h3>
           <div class="credential-details"><p><strong>Issuer:</strong> Naub</p></div>
-          <div class="credential-actions">
-            <a class="credential-button" href="assets/documents/certificates/Naub%20-%20Think%20Before%20You%20Click.pdf" target="_blank" rel="noopener noreferrer">View PDF <span aria-hidden="true">↗</span></a>
-            <a class="credential-button credential-button--download" href="assets/documents/certificates/Naub%20-%20Think%20Before%20You%20Click.pdf" download>Download PDF</a>
-          </div>
+          <div class="credential-actions"><a class="credential-button" href="assets/documents/certificates/Naub%20-%20Think%20Before%20You%20Click.pdf" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a><a class="credential-button credential-button--download" href="assets/documents/certificates/Naub%20-%20Think%20Before%20You%20Click.pdf" download>Download PDF</a></div>
         </article>
       </div>
     </section>
 
     <section class="credential-section" id="verification">
       <h2>Verification &amp; Document Notes</h2>
-      <p class="section-description">Use the view and download buttons when the matching certificate PDF is available. Any public verification links or credential IDs should be added to the relevant entry when confirmed.</p>
+      <p class="section-description">Use the view and download buttons to open the corresponding PDF. Credential details are shown where available in the existing page content.</p>
       <a class="back-to-top" href="#top">Back to top ↑</a>
     </section>
   </main>
@@ -212,12 +232,7 @@
   <footer class="site-footer">
     <div class="container footer-wrap">
       <p>© 2026 Umar Alfarouq Yusuf. All rights reserved.</p>
-      <div>
-        <a href="projects.html">Projects</a>
-        <a href="lab.html">DFLAB</a>
-        <a href="research.html">Research</a>
-        <a href="contact.html">Contact</a>
-      </div>
+      <div><a href="projects.html">Projects</a><a href="lab.html">DFLAB</a><a href="research.html">Research</a><a href="contact.html">Contact</a></div>
     </div>
   </footer>
 </body>
