@@ -288,19 +288,41 @@
       font-weight: 700;
     }
 
-    .document-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 8px;
-      color: #7dd3fc;
-      font-weight: 700;
-      text-decoration: none;
+    .document-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
     }
 
-    .document-link:hover {
+    .document-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 10px 15px;
+      border: 1px solid rgba(56, 189, 248, .35);
+      border-radius: 9px;
+      background: rgba(56, 189, 248, .1);
       color: #bae6fd;
-      text-decoration: underline;
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
+    }
+
+    .document-button:hover,
+    .document-button:focus-visible {
+      border-color: rgba(56, 189, 248, .75);
+      outline: none;
+      background: rgba(56, 189, 248, .2);
+      transform: translateY(-1px);
+    }
+
+    .document-button--download {
+      background: transparent;
+      color: #cbd5e1;
     }
 
     .back-to-top {
@@ -805,9 +827,14 @@
       <article class="experience-card" style="margin-top:20px">
         <h3>SIWES 2026–2027</h3>
         <p>Open or download the supplied SIWES PDF document.</p>
-        <a class="document-link" href="assets/documents/SIWES%202026-2027.pdf" target="_blank" rel="noopener noreferrer">
-          View SIWES document <span aria-hidden="true">↗</span>
-        </a>
+        <div class="document-actions">
+          <a class="document-button" href="assets/documents/SIWES%202026-2027.pdf">
+            View SIWES Document <span aria-hidden="true">↗</span>
+          </a>
+          <a class="document-button document-button--download" href="assets/documents/SIWES%202026-2027.pdf" download>
+            Download
+          </a>
+        </div>
       </article>
     </section>
 
