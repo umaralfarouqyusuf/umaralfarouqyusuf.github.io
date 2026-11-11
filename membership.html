@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Umar Alfarouq Yusuf's verified ICDFA student membership.">
+  <meta name="description" content="Umar Alfarouq Yusuf's ICDFA student membership and credential verification link.">
   <meta name="theme-color" content="#08111f">
   <title>Membership | Umar Alfarouq Yusuf</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,11 +23,11 @@
     .membership-id strong { color: var(--ink); font-weight: 600; }
     .membership-verify { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; color: var(--cyan); font-size: .9rem; font-weight: 700; }
     .membership-verify:hover, .membership-verify:focus-visible { color: var(--lime); }
-    .membership-badge-link { display: inline-flex; align-items: center; justify-content: center; min-width: 190px; min-height: 150px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(8, 17, 31, .48); transition: border-color .2s ease, transform .2s ease; }
+    .membership-badge-link { display: inline-flex; align-items: center; justify-content: center; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: rgba(8, 17, 31, .48); transition: border-color .2s ease, transform .2s ease; }
     .membership-badge-link:hover, .membership-badge-link:focus-visible { border-color: var(--cyan); outline: none; transform: translateY(-2px); }
-    .membership-badge { display: block; width: auto; height: 90px; max-width: 100%; }
+    .membership-badge { display: block; width: min(360px, 100%); height: auto; }
     .membership-note { max-width: 760px; margin-top: 22px; color: var(--muted); font-size: .9rem; }
-    @media (max-width: 620px) { .membership-card { grid-template-columns: 1fr; gap: 24px; } .membership-badge-link { justify-self: start; min-width: 170px; min-height: 130px; } }
+    @media (max-width: 720px) { .membership-card { grid-template-columns: 1fr; gap: 24px; } .membership-badge-link { justify-self: start; width: min(100%, 360px); } }
     @media (prefers-reduced-motion: reduce) { .membership-badge-link { transition: none; } }
   </style>
 </head>
@@ -49,12 +49,12 @@
     <div class="membership-heading">
       <p class="eyebrow">Professional Recognition</p>
       <h1>Qualifications &amp; Membership</h1>
-      <p>A verified student membership with the International Cybersecurity and Digital Forensics Academy.</p>
+      <p>A student membership with the International Cybersecurity and Digital Forensics Academy.</p>
     </div>
 
     <section class="membership-card" aria-labelledby="membership-title">
       <div>
-        <p class="membership-label">Verified student membership</p>
+        <p class="membership-label">Student membership</p>
         <h2 id="membership-title">ICDFA Student Member</h2>
         <p class="membership-id">Member ID: <strong>ICDFA-2026-03158</strong></p>
         <a class="membership-verify" href="https://membership.icdfa.edu.ng/verify.php?id=ICDFA-2026-03158" target="_blank" rel="noopener noreferrer">
@@ -62,10 +62,10 @@
         </a>
       </div>
       <a class="membership-badge-link" href="https://membership.icdfa.edu.ng/verify.php?id=ICDFA-2026-03158" target="_blank" rel="noopener noreferrer" aria-label="Open ICDFA membership verification">
-        <img class="membership-badge" src="https://membership.icdfa.edu.ng/member/badge.php?render=1&id=ICDFA-2026-03158" alt="ICDFA Student Member Badge" width="180" height="90">
+        <img class="membership-badge" src="assets/images/icdfa-student-member-badge.svg" alt="Custom portfolio badge displaying ICDFA Student Member and member ID ICDFA-2026-03158">
       </a>
     </section>
-    <p class="membership-note">The badge links to the issuer’s verification page. Select it or use “Verify membership” to check the credential.</p>
+    <p class="membership-note">This is a custom portfolio graphic because the issuer-hosted badge image may not display in all browsers. It is not an issuer-generated badge; use the verification link to check the membership with ICDFA.</p>
   </main>
 
   <footer class="site-footer">

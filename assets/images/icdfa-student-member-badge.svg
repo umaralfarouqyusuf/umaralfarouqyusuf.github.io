@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="180" viewBox="0 0 360 180" role="img" aria-labelledby="title description">
+  <title id="title">ICDFA Student Member portfolio badge</title>
+  <desc id="description">A custom portfolio display badge for ICDFA Student Member, member ID ICDFA-2026-03158. Verify membership on the ICDFA website.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102b40"/>
+      <stop offset="1" stop-color="#08111f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#74e4df"/>
+      <stop offset="1" stop-color="#c9ef78"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="356" height="176" rx="20" fill="url(#background)" stroke="#74e4df" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M24 24h312" stroke="#74e4df" stroke-opacity=".18"/>
+  <g transform="translate(24 43)">
+    <path d="M42 0 78 13v30c0 25-16 42-36 53C22 85 6 68 6 43V13L42 0Z" fill="#74e4df" fill-opacity=".12" stroke="url(#accent)" stroke-width="3"/>
+    <path d="m25 46 12 12 23-26" fill="none" stroke="#c9ef78" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+    <path d="M42 13v10" stroke="#74e4df" stroke-linecap="round" stroke-width="3" opacity=".8"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="120" y="50" fill="#74e4df" font-size="13" font-weight="700" letter-spacing="2.2">ICDFA MEMBERSHIP</text>
+    <text x="120" y="82" fill="#f1f7fa" font-size="22" font-weight="700">STUDENT MEMBER</text>
+    <text x="120" y="108" fill="#aebdca" font-size="12" letter-spacing="1.1">MEMBER ID</text>
+    <text x="120" y="130" fill="#f1f7fa" font-size="15" font-weight="700">ICDFA-2026-03158</text>
+    <rect x="120" y="146" width="112" height="2" rx="1" fill="url(#accent)"/>
+    <text x="244" y="152" fill="#74e4df" font-size="10" font-weight="700" letter-spacing="1">VERIFY ONLINE ↗</text>
+  </g>
+</svg>
