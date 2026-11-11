@@ -3,31 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Umar Alfarouq Yusuf's ICDFA student membership and credential verification link.">
+  <meta name="description" content="Digital Forensics research, technical notes, and analytical reference material by Umar Alfarouq Yusuf.">
   <meta name="theme-color" content="#08111f">
-  <title>Membership | Umar Alfarouq Yusuf</title>
+  <title>Membership | Umar Alfarouq Yusuf — Digital Forensics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .membership-main { padding: clamp(48px, 8vw, 90px) 0 100px; }
-    .membership-heading { max-width: 760px; margin-bottom: 38px; }
-    .membership-heading .eyebrow { margin-bottom: 16px; }
-    .membership-heading h1 { font-size: clamp(2.7rem, 7vw, 5rem); }
-    .membership-heading > p:last-child { max-width: 620px; margin: 22px 0 0; color: var(--muted); font-size: 1.05rem; }
-    .membership-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 36px; padding: clamp(24px, 5vw, 48px); border: 1px solid rgba(116, 228, 223, .3); border-radius: 18px; background: radial-gradient(circle at 100% 0, rgba(116, 228, 223, .12), transparent 34%), linear-gradient(145deg, #10243a, #0d1b2b 68%); box-shadow: 0 24px 60px rgba(0, 0, 0, .22); }
-    .membership-label { margin: 0 0 12px; color: var(--cyan); font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-    .membership-card h2 { font-size: clamp(1.7rem, 4vw, 2.6rem); }
-    .membership-id { margin: 20px 0 0; color: var(--muted); }
-    .membership-id strong { color: var(--ink); font-weight: 600; }
-    .membership-verify { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; color: var(--cyan); font-size: .9rem; font-weight: 700; }
+    .membership-main { padding: 80px 0 120px; }
+    .membership-heading { margin-bottom: 40px; }
+    .membership-heading p { max-width: 720px; color: var(--muted); font-size: 1.04rem; }
+    .membership-card { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; max-width: 980px; padding: 32px; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); }
+    .membership-label { margin: 0 0 10px; color: var(--cyan); font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .membership-id { margin: 16px 0 10px; color: var(--muted); }
+    .membership-verify { display: inline-flex; align-items: center; gap: 8px; color: var(--cyan); font-weight: 700; }
     .membership-verify:hover, .membership-verify:focus-visible { color: var(--lime); }
-    .membership-badge-link { display: inline-flex; align-items: center; justify-content: center; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: rgba(8, 17, 31, .48); transition: border-color .2s ease, transform .2s ease; }
+    .membership-badge-link { display: inline-flex; align-items: center; justify-content: center; min-width: 190px; min-height: 150px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(8,17,31,.48); transition: border-color .2s ease, transform .2s ease; }
     .membership-badge-link:hover, .membership-badge-link:focus-visible { border-color: var(--cyan); outline: none; transform: translateY(-2px); }
-    .membership-badge { display: block; width: min(360px, 100%); height: auto; }
+    .membership-badge { display: block; width: auto; height: 90px; max-width: 100%; }
     .membership-note { max-width: 760px; margin-top: 22px; color: var(--muted); font-size: .9rem; }
-    @media (max-width: 720px) { .membership-card { grid-template-columns: 1fr; gap: 24px; } .membership-badge-link { justify-self: start; width: min(100%, 360px); } }
+    @media (max-width: 720px) { .membership-card { grid-template-columns: 1fr; gap: 24px; } .membership-badge-link { justify-self: start; min-width: 170px; min-height: 130px; } }
     @media (prefers-reduced-motion: reduce) { .membership-badge-link { transition: none; } }
   </style>
 </head>
@@ -40,7 +36,16 @@
         <span>Umar Alfarouq Yusuf</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a><a href="skills.html">Skills</a><a href="certifications.html">Certifications</a><a class="active" href="membership.html" aria-current="page">Membership</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="skills.html">Skills</a>
+        <a href="certifications.html">Certifications</a>
+        <a class="active" href="membership.html" aria-current="page">Membership</a>
+        <a href="projects.html">Projects</a>
+        <a href="lab.html">DFLAB</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -49,12 +54,12 @@
     <div class="membership-heading">
       <p class="eyebrow">Professional Recognition</p>
       <h1>Qualifications &amp; Membership</h1>
-      <p>A student membership with the International Cybersecurity and Digital Forensics Academy.</p>
+      <p>A verified student membership with the International Cybersecurity and Digital Forensics Academy.</p>
     </div>
 
     <section class="membership-card" aria-labelledby="membership-title">
       <div>
-        <p class="membership-label">Student membership</p>
+        <p class="membership-label">Verified student membership</p>
         <h2 id="membership-title">ICDFA Student Member</h2>
         <p class="membership-id">Member ID: <strong>ICDFA-2026-03158</strong></p>
         <a class="membership-verify" href="https://membership.icdfa.edu.ng/verify.php?id=ICDFA-2026-03158" target="_blank" rel="noopener noreferrer">
@@ -65,13 +70,20 @@
         <img class="membership-badge" src="assets/images/icdfa-student-member-badge.svg" alt="Custom portfolio badge displaying ICDFA Student Member and member ID ICDFA-2026-03158">
       </a>
     </section>
-    <p class="membership-note">This is a custom portfolio graphic because the issuer-hosted badge image may not display in all browsers. It is not an issuer-generated badge; use the verification link to check the membership with ICDFA.</p>
+
+    <p class="membership-note">This membership highlights active participation in the International Cybersecurity and Digital Forensics Academy and supports my continued study in digital forensics, evidence handling, and technical investigation.</p>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-wrap">
       <p>© 2026 Umar Alfarouq Yusuf. All rights reserved.</p>
-      <div><a href="projects.html">Projects</a><a href="lab.html">DFLAB</a><a href="research.html">Research</a><a href="contact.html">Contact</a></div>
+      <div>
+        <a href="projects.html">Projects</a>
+        <a href="membership.html">Membership</a>
+        <a href="lab.html">DFLAB</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </footer>
 </body>
